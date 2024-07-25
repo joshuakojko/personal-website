@@ -13,7 +13,7 @@ import vercel from '@astrojs/vercel/serverless'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://joshuako.vercel.app',
+	site: 'https://joshuako.dev',
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		tailwind({
@@ -24,7 +24,8 @@ export default defineConfig({
 		icon()
 	],
 	redirects: {
-		'/resume': '/resume.pdf'
+		'/resume': '/resume.pdf',
+		'/novel-reader': 'https://github.com/joshuakojko/novel-reader'
 	},
 	markdown: {
 		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],

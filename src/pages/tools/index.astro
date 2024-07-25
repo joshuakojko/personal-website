@@ -8,14 +8,36 @@ const DEVELOPMENT = [
 		name: 'VS Code',
 		description: 'IDE',
 		href: 'https://code.visualstudio.com/',
-		iconPath: 'vscode',
 		iconBgColour: '#2C2C32'
 	},
 	{
+		name: 'Zed',
+		description: 'IDE',
+		href: 'https://zed.dev/',
+		iconBgColour: '#06A67F'
+	},
+	{
 		name: 'Claude 3.5 Sonnet',
-		description: 'AI',
+		description: 'LLM with Artifacts',
 		href: 'https://claude.ai/',
-		iconPath: 'vscode',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Ollama (Llama 3.1)',
+		description: 'Local LLM',
+		href: 'https://ollama.com',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Beyond Compare',
+		description: 'Data Comparison Software',
+		href: 'https://www.scootersoftware.com/',
+		iconBgColour: '#06A67F'
+	},
+	{
+		name: 'Code2Prompt',
+		description: 'LLM context prompting CLI tool',
+		href: 'https://github.com/raphaelmansuy/code2prompt',
 		iconBgColour: '#06A67F'
 	}
 ]
@@ -44,7 +66,6 @@ const DEVELOPMENT = [
 				<h1 class='mb-1 text-2xl font-bold'>Tools</h1>
 				<p>Tools and software I use daily</p>
 			</div>
-
 			<ToolSection title='Development' tools={DEVELOPMENT} />
 		</div>
 	</div>

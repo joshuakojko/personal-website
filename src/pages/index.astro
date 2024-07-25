@@ -13,7 +13,7 @@ import astro from '../assets/about-astro.png'
 import { getAllPosts, sortMDByDate } from '@/utils'
 
 const languages = ['Python', 'Java', 'JavaScript', 'MIPs Assembly']
-const frameworks = ['React', 'Node', 'Bootstrap', 'Flask', 'FastAPI']
+const frameworks = ['React', 'Node', 'Express', 'Bootstrap', 'Flask', 'FastAPI', 'Astro']
 const tools = ['Git', 'Docker', 'SQLite', 'Prometheus', 'Grafana', 'Selenium']
 
 const MAX_POSTS = 10
@@ -81,26 +81,33 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 
 			<Section title='About'>
 				<p>
-					Computer Science Student
-					<a href='https://www.sjsu.edu/cs/' target='_blank' style='color: blue;'
-						>@ San José State University</a
-					><br />
+					Welcome to my personal website! I'm Joshua Ko, a Computer Science student at
+					<a href='https://www.sjsu.edu/cs/' target='_blank' style='color: #1A73E8;'
+						> San José State University</a>
+					with an interest in building to learn and emerging technologies. <br /><br />
+					<b>Currently I work as a...</b><br />
 					Software Engineering Fellow
-					<a href='https://headstarter.co/' target='_blank' style='color: blue;'>@ Headstarter AI</a
+					<a href='https://headstarter.co/' target='_blank' style='color: #1A73E8;'>@ Headstarter AI</a
 					><br />
 					Software Engineer Intern
-					<a href='https://sce.sjsu.edu/' target='_blank' style='color: blue;'>@ SJSU SCE</a><br />
+					<a href='https://sce.sjsu.edu/' target='_blank' style='color: #1A73E8;'>@ SJSU SCE</a><br />
 					Highschool Research Mentor
-					<a href='https://www.sjsu.edu/cs/' target='_blank' style='color: blue;'
+					<a href='https://www.sjsu.edu/cs/' target='_blank' style='color: #1A73E8;'
 						>@ San José State University</a
 					><br /><br />
-					Currently Interested In...
+					<b>Current Interests</b>
 					<div>
 						<li>Browser-based 3D Game Engines</li>
 						<li>Multimodal LLM use cases</li>
 						<li>AR/VR applications in higher education</li>
 						<li>Generative UIs</li>
 					</div>
+					<br />
+					<b>What you'll find here</b><br />
+					An overview of my Experience, Projects, and Skills.<br />
+					Developer Tools I use to streamline my coding workflow and enhance my learning experience.<br />
+					Stay tuned for blog posts on internship takeaways, latest learnings, and project deep-dives.<br />
+					I'm open to new opportunities, collaborations, and insightful discussions. If anything here interests you, feel free to reach out via my socials linked above. <br />
 				</p>
 			</Section>
 			{
