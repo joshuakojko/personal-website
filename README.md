@@ -4,7 +4,7 @@ This website was made from [Astro theme "Resume"](https://astro.build/themes/det
 
 ## License
 
-The code in this repository includes code originally licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
+The code in this repository includes code originally licensed under the MIT License. The MIT License terms apply to the portions of the code that originated from [astro-theme-resume](https://github.com/srleom/astro-theme-resume). See the [LICENSE](./LICENSE) file for the complete MIT License terms and the relevant copyright notice.
 
 ## Credits
 - [astro-theme-resume](https://github.com/srleom/astro-theme-resume) for site template
