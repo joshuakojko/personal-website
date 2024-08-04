@@ -12,9 +12,9 @@ import astro from '../assets/about-astro.png'
 
 import { getAllPosts, sortMDByDate } from '@/utils'
 
-const languages = ['Python', 'Java', 'JavaScript', 'MIPs Assembly']
-const frameworks = ['React', 'Node', 'Express', 'Bootstrap', 'Flask', 'FastAPI', 'Astro']
-const tools = ['Git', 'Docker', 'SQLite', 'Prometheus', 'Grafana', 'Selenium']
+const languages = ['Python', 'Java', 'JavaScript', 'TypeScript', 'MIPs Assembly']
+const frameworks = ['React', 'Node', 'Express', 'Next', 'Bootstrap', 'Flask', 'FastAPI', 'Astro']
+const tools = ['Git', 'Docker', 'SQLite', 'Prometheus', 'Grafana', 'Selenium', 'Firebase', 'Vercel']
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -176,10 +176,28 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 						class='w-full sm:w-1/2'
 					/>
 					<ProjectCard
+						href='https://github.com/joshuakojko/pantry-tracker'
+						heading='Pantry Tracker'
+						subheading='Next.js, React, TypeScript, Firebase, OpenRouter API'
+						imagePath='/src/assets/pantry-tracker.png'
+						altText='Example'
+						class='w-full sm:w-1/2'
+					/>
+				</div>
+				<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
+					<ProjectCard
 						as='div'
 						heading='Coming soon...'
-						subheading='Raycaster Engine, File Backup Scheduler, '
+						subheading='Raycaster Engine'
 						imagePath='/src/assets/raycaster-engine-progress.png'
+						altText='Lorem, ipsum dolor sit'
+						class='w-full sm:w-1/2'
+					/>
+					<ProjectCard
+						as='div'
+						heading='Coming soon...'
+						subheading='File Backup Scheduler'
+						imagePath='/src/assets/file-backup-scheduler.png'
 						altText='Lorem, ipsum dolor sit'
 						class='w-full sm:w-1/2'
 					/>
