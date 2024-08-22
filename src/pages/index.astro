@@ -13,8 +13,8 @@ import astro from '../assets/about-astro.png'
 import { getAllPosts, sortMDByDate } from '@/utils'
 
 const languages = ['Python', 'Java', 'JavaScript', 'TypeScript', 'MIPs Assembly']
-const frameworks = ['React', 'Node', 'Express', 'Next', 'Bootstrap', 'Flask', 'FastAPI', 'Astro']
-const tools = ['Git', 'Docker', 'SQLite', 'Prometheus', 'Grafana', 'Selenium', 'Firebase', 'Vercel']
+const frameworks = ['React', 'Node', 'Express', 'Next', 'Flask', 'FastAPI']
+const tools = ['Git', 'Docker', 'SQLite', 'Prometheus', 'Grafana', 'Selenium', 'Firebase', 'Postman', 'Vercel']
 
 const MAX_POSTS = 10
 const allPosts = await getAllPosts()
@@ -89,18 +89,16 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					Software Engineering Fellow
 					<a href='https://headstarter.co/' target='_blank' style='color: #1A73E8;'>@ Headstarter AI</a
 					><br />
-					Software Engineer Intern
-					<a href='https://sce.sjsu.edu/' target='_blank' style='color: #1A73E8;'>@ SJSU SCE</a><br />
 					Highschool Research Mentor
 					<a href='https://www.sjsu.edu/cs/' target='_blank' style='color: #1A73E8;'
 						>@ San José State University</a
 					><br /><br />
 					<b>Current Interests</b>
 					<div>
-						<li>Browser-based 3D Game Engines</li>
+						<li>LLM orchestration flows & AI Agents</li>
 						<li>Multimodal LLM use cases</li>
-						<li>AR/VR applications in higher education</li>
-						<li>Generative UIs</li>
+						<li>AR/VR applications</li>
+						<li>Browser-based 3D Game Engines</li>
 					</div>
 					<br />
 					<b>What you'll find here</b><br />
@@ -168,8 +166,27 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 			<Section title='Projects'>
 				<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
 					<ProjectCard
+					href='https://github.com/joshuakojko/ginder'
+					heading='Ginder (Open Source Repo Finder Chatbot)'
+					subheading='Next.js, React, TypeScript, Octokit, FlowiseAI, Drizzle ORM, Cloudflare (Workers/Vectorize/D1/KV/AI)'
+					imagePath='/src/assets/ginder.png'
+					altText='Example'
+					class='w-full sm:w-1/2'
+					/>
+					<ProjectCard
+						href='https://github.com/joshuakojko/flashcards'
+						heading='Flashcards (AI Generated Flashcards)'
+						subheading='Next.js, React, TypeScript, shadcn/ui, Clerk, Firebase, OpenAI, Zod, Vercel'
+						imagePath='/src/assets/ai-flashcards.png'
+						altText='Example'
+						class='w-full sm:w-1/2'
+					/>
+				</div>
+
+				<div class='flex flex-col gap-y-3 sm:flex-row sm:gap-x-3 sm:gap-y-0'>
+					<ProjectCard
 						href='https://github.com/joshuakojko/novel-reader'
-						heading='Novel Reader'
+						heading='Novel Reader (Reader Mode Viewer Library)'
 						subheading='Python, Flask, SQLite, JavaScript, OAuth, Selenium'
 						imagePath='/src/assets/novel-reader-capture.png'
 						altText='Example'
@@ -177,7 +194,7 @@ const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
 					/>
 					<ProjectCard
 						href='https://github.com/joshuakojko/pantry-tracker'
-						heading='Pantry Tracker'
+						heading='Pantry Tracker (AI Recipe Generator)'
 						subheading='Next.js, React, TypeScript, Firebase, OpenRouter API'
 						imagePath='/src/assets/pantry-tracker.png'
 						altText='Example'
