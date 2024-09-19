@@ -10,11 +10,21 @@ const {
 	heading,
 	subheading,
 	imagePath,
+	videoId,
 	altText
 } = Astro.props
+
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/*.{jpeg,jpg,png,gif}')
-if (!images[imagePath])
+const hasImage = imagePath && images[imagePath]
+const hasVideo = videoId
+
+if (imagePath && !hasImage) {
 	throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`)
+}
+
+if (!hasImage && !hasVideo) {
+	throw new Error("At least one of imagePath or videoId must be provided")
+}
 ---
 
 <Tag
@@ -26,16 +36,28 @@ if (!images[imagePath])
 	href={href}
 	{...href ? { target: '_blank', rel: 'noopener noreferrer' } : {}}
 >
-	<Image
-		src={images[imagePath]()}
-		alt={altText}
-		class='h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover'
-		loading='eager'
-	/>
-	<div class='flex flex-col gap-y-0.5 px-5 py-4'>
-		<h1 class='text-lg font-medium'>{heading}</h1>
-		<h2 class='text-muted-foreground'>{subheading}</h2>
+	{hasImage && (
+		<Image
+			src={images[imagePath]()}
+			alt={altText}
+			class='h-48 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover'
+			loading='eager'
+		/>
+	)}
+	{hasVideo && (
+		<div class="aspect-w-16 aspect-h-9">
+			<iframe
+				src={`https://www.youtube.com/embed/${videoId}`}
+				title={altText}
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+				class="rounded-2xl rounded-bl-none rounded-br-none"
+			></iframe>
+		</div>
+	)}
+	<div class="p-4">
+		<h3 class="text-lg font-semibold">{heading}</h3>
+		{subheading && <p class="text-sm text-muted-foreground">{subheading}</p>}
 	</div>
-
-	<slot />
 </Tag>
